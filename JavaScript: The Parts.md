@@ -1,19 +1,20 @@
-JavaScript: The Parts
- Functions With Names
+#JavaScript: The Parts
+## Functions With Names
 
-
+````
 []        - list
 {}        - dictionary
 () => {}  - function
+````
 
-
-
+````ES6
 aFn = () => { return 'just a function'; }
 
-takesArguments = argument => generateRebuttal(argument)
+takesArguments = (argument1, argument2) => generateRebuttal([argument1, argument2])
 
-generateRebuttal = argument => {
+generateRebuttal = arguments => {
   return () => {
 
   }
 }
+````
