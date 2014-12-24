@@ -1,0 +1,50 @@
+
+generator sequence notation:
+
+(x)     | x is optional
+[x]     | x may occur multiple times
+
+() should not occur directly inside a []
+
+
+node : value ([node])
+
+
+generator output notation:
+
+`1
+``2
+```3
+``4
+
+[1
+  [2
+    [3]
+  [4]
+  [5
+    [6]
+    [7]]]]
+
+
+
+reduce with (x, y) => x + y
+
+`1
+``2
+```3
+``4
+
+3 reduce 2 = 5
+reduce 5, 4 = 9
+9 reduce 1 = 10
+
+
+what if reduce on type?
+
+(x, y) => {
+  switch (x.$type) {
+    case 'machine':
+      x[y.id] = y;
+      return x;
+  }
+}
