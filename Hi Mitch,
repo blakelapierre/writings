@@ -1,0 +1,18 @@
+Hi Mitch,
+
+It took me a little longer to be able to wield CoreOS than I had first anticipated, but I think I have a bit of a handle on it now. They threw out a bit of a curveball with their new rocket tool for launching containers awhile back. I've been following it pretty closely and it's still not ready for prime time yet. ~2 months later and it's still not in their Alpha channel, although I'm anticipating that it should appear there within the next 0-2 months. Because of this (and a few other reasons), I've spent most of the last 5 months working on application, library, and prototype code. There are quite a few projects that I'm planning to launch within a short period of time and I've mostly been stockpiling code (in the open) and knowledge.
+
+A few weeks after we talked, I did some early testing/benchmarking and was very happy with the results. The largest test was spinning up 200 CoreOS machines simultaneously in one datacenter. Most machines booted and had pulled all the application containers (I believe a couple hundred MB for each machine) from the Docker registry in under 3 minutes. Very cool. I stopped testing at that point because I had seen enough; infrastructure code was needed to be able to manage this many machines (planning for x,000's+ across all datacenters, as needed). While I have experience and knowledge across the entire stack (silicon-to-kernel-to-applications-to-clouds), running at this scale is still new to me; there's a bit of a learning curve, to say the least.
+
+I haven't been satisfied with the current management offerings I've been able to find for the type of systems I'm planning to run, so I've been working on my own solution. I know there are quite a few other groups that are working on solutions as well, but from what I can tell they aren't ready yet either. I've been trying to whittle things down to the bare essentials and I believe I have a good design (mostly a very rough outline on the master branch at the moment). Most of it still remains to be implemented, but if I have it right it won't be *too* difficult (primarily because I am able to build off of so many others' great work). Keep in mind that not only do the machines need to be managed, but the applications need to be continuously deployable (commit -> production).
+
+I have spoken to Brian "Redbeard" Harrington and a small number of others at CoreOS about this project and there is some concern about possible commodification of cloud providers. I believe that providing a standardized layer across providers is essential for developers and that it will only help both developers and providers. We need to be able to run our software on a truly global scale and that is only possible by leveraging the capabilities of all the providers. The amount of software being run is only going to increase and will likely begin to rapidly outstrip the current supply of hardware.
+
+At the current time, a lot of this is still speculation. Someone else may provide a workable solution tomorrow (although I think that is unlikely), but for now I will continue to pursue my solution. All of my code is free and open; if/when real money & interest enters the equation, budgets and operations will also be open. The goal is to be as open and inclusive as possible, but I am still working on figuring out how to create that.
+
+I don't want to spam you with too much information and writing, but hopefully some of this will begin to enter the wild "soon".
+
+
+Thanks for you patience,
+
+Blake La Pierre
